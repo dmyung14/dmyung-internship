@@ -7,7 +7,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 
 const ItemDetails = () => {
-  const { cardId } = useParams();
+  const { cardId } = useParams()
+  const { nftId } = useParams()   
 
   useEffect(() => {
     window.scrollTo(0, 0);

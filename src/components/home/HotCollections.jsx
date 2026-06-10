@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import HotCollectionsNext from "./HotCollectionsNext";
 import HotCollectionsPrev from "./HotCollectionsPrev";
 import "../../css/styles/slider-arrows.css"
+import Skeleton from "../UI/Skeleton";
 
 const HotCollections = () => {
 
@@ -76,15 +77,23 @@ const HotCollections = () => {
                   <div key={index}>
                     <div className="nft_coll">
                       <div className="nft_wrap">
-                        <div className="skeleton-box" style={{ width: "100%", height: "200px" }}></div>
+                        <Skeleton width="100%" height="200px" />
                       </div>
                       <div className="nft_coll_pp">
-                        <div className="skeleton-box" style={{ width: "50px", height: "50px", borderRadius: "50%" }}></div>
-                        <i class="fa fa-check"></i>
+                        <Skeleton width="50px" height="50px" borderRadius="50%" />
+                        <i className="fa fa-check"></i>
                       </div>
                       <div className="nft_coll_info" style={{ textAlign: "center" }}>
-                        <div className="skeleton-box" style={{ width: "100px", height: "20px", display: "block", margin: "0 auto 8px" }}></div>
-                        <div className="skeleton-box" style={{ width: "60px", height: "16px", display: "block", margin: "0 auto" }}></div>
+                        <Skeleton
+                          width="100px"
+                          height="20px"
+                          style={{ display: "block", margin: "0 auto 8px" }}
+                        />
+                        <Skeleton
+                          width="60px"
+                          height="16px"
+                          style={{ display: "block", margin: "0 auto" }}
+                        />
                       </div>
                     </div>
                   </div>
