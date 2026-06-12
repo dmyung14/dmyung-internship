@@ -2,7 +2,6 @@ import React from "react";
 import AuthorBanner from "../images/author_banner.jpg";
 import AuthorItems from "../components/author/AuthorItems";
 import { Link } from "react-router-dom";
-import AuthorImage from "../images/author_thumbnail.jpg";
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
@@ -34,6 +33,7 @@ const Author = () => {
 
   useEffect(() => {
     getAuthor()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
