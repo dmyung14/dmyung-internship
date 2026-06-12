@@ -23,7 +23,6 @@ const ExploreItems = () => {
 
   const filterNfts = (filter) => {
     setFilter(filter)
-    console.log(filter)
   }
 
   const loadItems = () => setloadedItems(prevNum => prevNum + 4)
