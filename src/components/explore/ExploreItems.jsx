@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AuthorImage from "../../images/author_thumbnail.jpg";
-import nftImage from "../../images/nftImage.jpg";
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import Item from "../UI/Item";
@@ -29,6 +27,7 @@ const ExploreItems = () => {
 
   useEffect(() => {
     getItems()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filter])
 
   const loading = items.length === 0
