@@ -7,6 +7,7 @@ const Item = ({ index, authorId, authorImage, nftImage, nftId, title, price, lik
     const [secondsText, setSecondsText] = useState("00")
     const [minutesText, setMinutesText] = useState("00")
     const [hoursText, setHoursText] = useState("00")
+    let expired = false
     
     useEffect(() => {
         const convertTime = () => {
@@ -30,6 +31,8 @@ const Item = ({ index, authorId, authorImage, nftImage, nftId, title, price, lik
 
         return () => clearInterval(intervalId)
     }, [expiryDate])
+
+    if (expiryDate - Date.now() <= 0) expired = true
     
     return (
     <div className="nft__item">
@@ -44,7 +47,11 @@ const Item = ({ index, authorId, authorImage, nftImage, nftId, title, price, lik
             <i className="fa fa-check"></i>
             </Link>
         </div>
-        <div className="de_countdown">{hoursText}h {minutesText}m {secondsText}s</div>
+        {
+            !expired ? <div className="de_countdown">{hoursText}h {minutesText}m {secondsText}s</div>
+            : null
+        }
+        
 
         <div className="nft__item_wrap">
             <div className="nft__item_extra">
