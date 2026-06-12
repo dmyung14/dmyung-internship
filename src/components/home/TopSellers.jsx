@@ -60,6 +60,7 @@ const TopSellers = () => {
               ))
               : sellers.map((seller, index) => (
                   <Seller 
+                    key={seller.id}
                     index={index} 
                     authorName={seller.authorName}
                     authorImage={seller.authorImage}
